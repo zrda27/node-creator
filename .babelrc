@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "latest",
+    "react"
+  ],
+  "plugins": [
+    ["transform-runtime", {
+      "polyfill": false,
+      "regenerator": true
+    }],
+    "transform-regenerator",
+    "transform-export-extensions"
+  ]
+}

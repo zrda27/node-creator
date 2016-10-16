@@ -1,10 +1,26 @@
 {
   "name": "node-creator",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=6.8.0"
+  },
   "description": "create project template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "npm run build",
+    "start": "node lib/app.js",
+    "stop": "pkill --signal SIGINT koa-app",
+    "restart": "npm stop && npm run build && npm start",
+    "pretest": "echo preTest",
+    "test": "echo 1",
+    "hh": "echo hh",
+    "prehh": "echo prehh",
+    "prebabel": "rm -rf lib",
+    "babel": "babel src -d dist",
+    "less": "lessc less/**/** public/style.css",
+    "webpack1": "webpack -p -d lib/brower/*.js public/browerify.js",
+    "build": "npm run babel && npm run test && webpack",
+    "clean": "rm -rf dist public/build"
   },
   "repository": {
     "type": "git",
@@ -20,5 +36,33 @@
   "bugs": {
     "url": "https://github.com/zrda27/node-creator/issues"
   },
-  "homepage": "https://github.com/zrda27/node-creator#readme"
+  "homepage": "https://github.com/zrda27/node-creator#readme",
+  "dependencies": {
+    "file-loader": "^0.9.0",
+    "koa": "^1.2.4",
+    "koa-router": "^5.4.0",
+    "koa-static": "^2.0.0",
+    "mongoose": "^4.6.3",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1",
+    "url-loader": "^0.5.7"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-export-extensions": "^6.8.0",
+    "babel-plugin-transform-regenerator": "^6.16.1",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "css-loader": "^0.25.0",
+    "jsx-loader": "^0.13.2",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2"
+  }
 }
