@@ -1,7 +1,7 @@
 /**
  * Created by zengruda on 10/15/16.
  */
-import React from 'react';
+import React from '../enhance/enReact';
 import ReactDom from 'react-dom';
 import { Router, Route, Link, IndexRoute, hashHistory } from 'react-router';
 import Nav from './Component/Nav';
@@ -22,7 +22,7 @@ let items = [
 
 let Index = React.createClass({
     clickh: function(){
-        this.refs.Nav.setState({
+        document.$.Nav.setState({
             items: [
                 {
                     id: "/WelCome",
@@ -36,9 +36,10 @@ let Index = React.createClass({
         });
     },
     render: function(){
+        window.Index = this;
         return (
             <div>
-                <Nav ref="Nav"/>
+                <Nav ref="Nav" reactId="Nav"/>
                 <input type="button" value="点击" onClick={this.clickh}/>
             </div>
         );

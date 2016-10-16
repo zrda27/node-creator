@@ -1,7 +1,7 @@
 /**
  * Created by zengruda on 10/15/16.
  */
-import React from 'react';
+import React from '../enhance/enReact';
 import { render } from 'react-dom';
 import { Router, Route, Link, IndexRoute, browserHistory, hashHistory } from 'react-router';
 
