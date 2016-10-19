@@ -11,6 +11,9 @@
 - nvm install 6.8.0
 - nvm use 6.8.0
 
+### 更改npm源
+- npm config set registry https://registry.npm.taobao.org
+
 ### koa
 - npm i -S koa
 - npm i -S koa-router
@@ -104,4 +107,4 @@
 - npm i -S file-loader
 
 ## react
-- npm i -S react react-router react react-dom
+- npm i -S redux react react-router react react-dom

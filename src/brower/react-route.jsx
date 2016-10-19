@@ -1,12 +1,13 @@
 /**
  * Created by zengruda on 10/15/16.
  */
-import React from '../enhance/enReact';
+import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, Link, IndexRoute, browserHistory, hashHistory } from 'react-router';
 
 var App = React.createClass({
     render: function () {
+        alert(this.context);
         return (
             <div>
                 <header>
@@ -60,7 +61,7 @@ class Calendar extends React.Component{
 
 render((
     <Router history={hashHistory}>
-        <Route path="/" component={App}>
+        <Route path="/" component={App} data-ii="123">
             <IndexRoute component={Dashboard}/>
             <Route path="/app" component={Dashboard}/>
             <Route path="/inbox" component={Inbox}/>
