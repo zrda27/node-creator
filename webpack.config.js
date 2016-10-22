@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 module.exports = {
-    devtool: 'source-map',
+    //devtool: 'source-map',
     entry: {
         index: './src/brower/index.jsx', //编译的入口文件
     },
@@ -31,9 +31,9 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin('common.js'), //将公用模块，打包进common.js
-        new webpack.optimize.UglifyJsPlugin({compress:{
+        /*new webpack.optimize.UglifyJsPlugin({compress:{
             warnings: false
-        }}),
+        }}),*/
         new webpack.HotModuleReplacementPlugin()
     ],
     resolve: {

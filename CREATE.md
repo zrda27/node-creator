@@ -102,9 +102,12 @@
   loaders: ['jsx', 'babel?presets[]=es2015,presets[]=stage-0,presets[]=react']
   }
 ```
-- npm i -S css-loader 
-- npm i -S url-loader
-- npm i -S file-loader
+- npm i -D css-loader 
+- npm i -D url-loader
+- npm i -D file-loader
 
 ## react
-- npm i -S redux react react-router react react-dom
+- npm i -D react-redux redux react react-router react-dom
+
+## bootstrap
+- npm i -D bootstrap
